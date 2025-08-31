@@ -1,0 +1,21 @@
+{
+  "name": "mathlib-codespace",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "remoteUser": "codespace",
+  "containerEnv": {
+    "VSCODE_API_VERSION": "1.50.0"
+  },
+  "postCreateCommand": "bash -lc 'source ~/.bashrc && elan --version || true'",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "leanprover.lean",
+        "jroesch.lean",
+        "ms-vscode.git",
+        "ms-vscode.cpptools"
+      ]
+    }
+  }
+}
